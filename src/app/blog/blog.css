@@ -1,0 +1,263 @@
+/* Blog Post Typography and Layout Styles */
+
+/* Article Container */
+.blog-article {
+  @apply container mx-auto px-4 py-16 max-w-4xl;
+}
+
+/* Prose Enhancement */
+.blog-content {
+  @apply max-w-none;
+  
+  /* Paragraph Styling */
+  & p {
+    @apply text-base leading-relaxed mb-6 text-gray-700 dark:text-gray-300;
+    line-height: 1.8;
+  }
+  
+  /* First paragraph of each section */
+  & section > p:first-of-type {
+    @apply text-lg leading-relaxed;
+  }
+  
+  /* Headings */
+  & h2 {
+    @apply text-3xl font-bold mt-12 mb-6 text-gray-900 dark:text-gray-100;
+    scroll-margin-top: 5rem;
+  }
+  
+  & h3 {
+    @apply text-2xl font-semibold mt-8 mb-4 text-gray-800 dark:text-gray-200;
+  }
+  
+  & h4 {
+    @apply text-xl font-medium mt-6 mb-3 text-gray-800 dark:text-gray-200;
+  }
+  
+  /* Lists */
+  & ul {
+    @apply my-6 space-y-2;
+  }
+  
+  & ul li {
+    @apply relative pl-6 text-gray-700 dark:text-gray-300;
+  }
+  
+  & ul li::before {
+    @apply absolute left-0 top-2 w-1.5 h-1.5 bg-primary rounded-full;
+    content: "";
+  }
+  
+  & ol {
+    @apply my-6 space-y-2;
+  }
+  
+  & ol li {
+    @apply pl-6 text-gray-700 dark:text-gray-300;
+  }
+  
+  /* Links */
+  & a {
+    @apply text-primary hover:text-primary/80 underline underline-offset-4 transition-colors;
+  }
+  
+  /* Code Blocks */
+  & pre {
+    @apply bg-gray-100 dark:bg-gray-900 p-6 rounded-xl overflow-x-auto my-8 border border-gray-200 dark:border-gray-800;
+  }
+  
+  & pre code {
+    @apply text-sm font-mono text-gray-800 dark:text-gray-200;
+    line-height: 1.6;
+  }
+  
+  /* Inline Code */
+  & code:not(pre code) {
+    @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono text-primary;
+  }
+  
+  /* Blockquotes */
+  & blockquote {
+    @apply border-l-4 border-primary pl-6 my-8 italic text-gray-700 dark:text-gray-300;
+  }
+  
+  /* Tables */
+  & table {
+    @apply w-full my-8 overflow-hidden rounded-lg;
+  }
+  
+  & thead {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+  
+  & th {
+    @apply px-6 py-3 text-left text-sm font-semibold text-gray-900 dark:text-gray-100;
+  }
+  
+  & td {
+    @apply px-6 py-4 text-sm text-gray-700 dark:text-gray-300 border-t border-gray-200 dark:border-gray-800;
+  }
+  
+  /* Images */
+  & img {
+    @apply rounded-lg shadow-lg my-8;
+  }
+  
+  /* Horizontal Rules */
+  & hr {
+    @apply my-12 border-gray-200 dark:border-gray-800;
+  }
+}
+
+/* Special Sections */
+.blog-content {
+  /* Callout Boxes */
+  & .callout {
+    @apply p-6 my-8 rounded-lg border;
+  }
+  
+  & .callout-info {
+    @apply bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800;
+  }
+  
+  & .callout-warning {
+    @apply bg-yellow-50 dark:bg-yellow-950/20 border-yellow-200 dark:border-yellow-800;
+  }
+  
+  & .callout-success {
+    @apply bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800;
+  }
+  
+  & .callout-error {
+    @apply bg-red-50 dark:bg-red-950/20 border-red-200 dark:border-red-800;
+  }
+}
+
+/* Roadmap Specific Styles */
+.roadmap-section {
+  @apply my-12;
+}
+
+.roadmap-timeline {
+  @apply relative pl-8;
+}
+
+.roadmap-timeline::before {
+  @apply absolute left-2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent;
+  content: "";
+}
+
+.roadmap-item {
+  @apply relative mb-12 last:mb-0;
+}
+
+.roadmap-item::before {
+  @apply absolute -left-6 top-2 w-4 h-4 bg-primary rounded-full border-4 border-background;
+  content: "";
+}
+
+.roadmap-item.completed::before {
+  @apply bg-green-500;
+}
+
+.roadmap-item.in-progress::before {
+  @apply bg-yellow-500 animate-pulse;
+}
+
+.roadmap-item.planned::before {
+  @apply bg-gray-300 dark:bg-gray-600;
+}
+
+.roadmap-quarter {
+  @apply text-sm font-semibold text-muted-foreground mb-2;
+}
+
+.roadmap-title {
+  @apply text-xl font-bold mb-2;
+}
+
+.roadmap-description {
+  @apply text-gray-700 dark:text-gray-300 mb-4;
+}
+
+.roadmap-features {
+  @apply space-y-2;
+}
+
+.roadmap-features li {
+  @apply flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400;
+}
+
+.roadmap-features li::before {
+  @apply text-primary mt-0.5;
+  content: "→";
+}
+
+/* Article Header Enhancement */
+.article-header {
+  @apply mb-12 pb-8 border-b border-gray-200 dark:border-gray-800;
+}
+
+.article-meta {
+  @apply flex flex-wrap items-center gap-4 text-sm text-muted-foreground;
+}
+
+/* Related Posts Section */
+.related-posts {
+  @apply mt-16 pt-12 border-t border-gray-200 dark:border-gray-800;
+}
+
+.related-posts-grid {
+  @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
+}
+
+/* Share Buttons */
+.share-section {
+  @apply flex items-center gap-4 my-8 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg;
+}
+
+.share-button {
+  @apply flex items-center gap-2 px-4 py-2 rounded-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors;
+}
+
+/* Table of Contents */
+.toc {
+  @apply p-6 bg-gray-50 dark:bg-gray-900 rounded-lg my-8;
+}
+
+.toc-title {
+  @apply text-lg font-semibold mb-4;
+}
+
+.toc-list {
+  @apply space-y-2;
+}
+
+.toc-list a {
+  @apply text-sm text-gray-600 dark:text-gray-400 hover:text-primary no-underline;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+  @apply my-12 p-8 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20;
+}
+
+.newsletter-title {
+  @apply text-2xl font-bold mb-2;
+}
+
+.newsletter-description {
+  @apply text-gray-700 dark:text-gray-300 mb-6;
+}
+
+.newsletter-form {
+  @apply flex gap-4 flex-col sm:flex-row;
+}
+
+.newsletter-input {
+  @apply flex-1 px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900;
+}
+
+.newsletter-button {
+  @apply px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors;
+}

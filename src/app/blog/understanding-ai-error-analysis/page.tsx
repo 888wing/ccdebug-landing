@@ -1,52 +1,40 @@
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
+import { BlogLayout } from "@/components/blog-layout"
 import Link from "next/link"
-import { ArrowLeft, Clock, Calendar, Tag } from "lucide-react"
 
 export default function UnderstandingAIErrorAnalysis() {
+  const metadata = {
+    title: "Understanding AI-Powered Error Analysis",
+    description: "Deep dive into how CCDebugger uses AI to analyze and understand your code errors",
+    date: "December 5, 2024",
+    readTime: "8 min",
+    category: "Technical",
+    tags: ["AI", "Debugging", "Tutorial"]
+  }
+
+  const relatedPosts = [
+    {
+      title: "Custom Templates: Share Your Debugging Patterns",
+      slug: "custom-templates",
+      description: "Learn how to create and share custom debugging templates with the CCDebugger community",
+      readTime: "6 min"
+    },
+    {
+      title: "Performance Tips for Large Codebases",
+      slug: "performance-tips",
+      description: "Optimize CCDebugger performance when working with large projects",
+      readTime: "7 min"
+    },
+    {
+      title: "Getting Started with CCDebugger",
+      slug: "getting-started",
+      description: "A comprehensive guide to installing and using CCDebugger for the first time",
+      readTime: "5 min"
+    }
+  ]
+
   return (
-    <article className="container mx-auto px-4 py-16 max-w-4xl">
-      {/* Back to blog */}
-      <Link 
-        href="/blog" 
-        className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8"
-      >
-        <ArrowLeft className="mr-2 h-4 w-4" />
-        Back to blog
-      </Link>
-
-      {/* Article header */}
-      <header className="mb-8">
-        <div className="flex items-center gap-2 mb-4">
-          <Badge variant="secondary">Technical</Badge>
-          <Badge variant="outline">AI</Badge>
-          <Badge variant="outline">Debugging</Badge>
-        </div>
-        
-        <h1 className="text-4xl font-bold mb-4">
-          Understanding AI-Powered Error Analysis
-        </h1>
-        
-        <p className="text-xl text-muted-foreground mb-6">
-          Deep dive into how CCDebugger uses AI to analyze and understand your code errors
-        </p>
-        
-        <div className="flex items-center gap-4 text-sm text-muted-foreground">
-          <span className="flex items-center gap-1">
-            <Calendar className="h-4 w-4" />
-            December 5, 2024
-          </span>
-          <span className="flex items-center gap-1">
-            <Clock className="h-4 w-4" />
-            8 min read
-          </span>
-        </div>
-      </header>
-
-      <Separator className="mb-8" />
-
-      {/* Article content */}
-      <div className="prose prose-neutral dark:prose-invert max-w-none">
+    <BlogLayout metadata={metadata} relatedPosts={relatedPosts}>
+      <>
         <section className="mb-8">
           <h2>Introduction</h2>
           <p>
@@ -302,33 +290,7 @@ dictionaries. Either:
             Get started with CCDebugger</Link> today and transform how you debug code.
           </p>
         </section>
-      </div>
-
-      {/* Article footer */}
-      <Separator className="my-8" />
-      
-      <div className="flex items-center justify-between">
-        <Link 
-          href="/blog" 
-          className="text-sm text-muted-foreground hover:text-foreground"
-        >
-          ← Back to all posts
-        </Link>
-        <div className="flex gap-2">
-          <Badge variant="outline">
-            <Tag className="mr-1 h-3 w-3" />
-            AI
-          </Badge>
-          <Badge variant="outline">
-            <Tag className="mr-1 h-3 w-3" />
-            Debugging
-          </Badge>
-          <Badge variant="outline">
-            <Tag className="mr-1 h-3 w-3" />
-            Tutorial
-          </Badge>
-        </div>
-      </div>
-    </article>
+      </>
+    </BlogLayout>
   )
 }
