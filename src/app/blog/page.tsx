@@ -17,6 +17,7 @@ import Link from "next/link"
 const blogPosts = [
   {
     id: 1,
+    slug: "getting-started",
     title: "Getting Started with CCDebugger: A Complete Guide",
     description: "Learn how to set up and use CCDebugger to supercharge your Claude Code debugging workflow",
     category: "Tutorial",
@@ -28,6 +29,7 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "understanding-ai-error-analysis",
     title: "Understanding AI-Powered Error Analysis",
     description: "Deep dive into how CCDebugger uses AI to analyze and understand your code errors",
     category: "Technical",
@@ -38,6 +40,7 @@ const blogPosts = [
   },
   {
     id: 3,
+    slug: "custom-templates",
     title: "Custom Templates: Share Your Debugging Patterns",
     description: "How to create, use, and share custom debugging templates with the community",
     category: "Guide",
@@ -48,6 +51,7 @@ const blogPosts = [
   },
   {
     id: 4,
+    slug: "performance-tips",
     title: "Performance Tips for Large Codebases",
     description: "Optimize CCDebugger performance when working with enterprise-scale projects",
     category: "Performance",
@@ -58,6 +62,7 @@ const blogPosts = [
   },
   {
     id: 5,
+    slug: "building-ccdebugger",
     title: "Building CCDebugger: Our Journey",
     description: "The story behind CCDebugger and how we built an AI-powered debugging tool",
     category: "Story",
@@ -162,7 +167,7 @@ export default function BlogPage() {
                     <Badge variant="outline">{post.category}</Badge>
                   </div>
                   <CardTitle className="text-xl hover:text-primary transition-colors">
-                    <Link href={`/blog/post-${post.id}`}>
+                    <Link href={`/blog/${post.slug}`}>
                       {post.title}
                     </Link>
                   </CardTitle>
@@ -182,7 +187,7 @@ export default function BlogPage() {
                     </span>
                   </div>
                   <Button variant="ghost" size="sm" className="mt-4 -ml-2" asChild>
-                    <Link href={`/blog/post-${post.id}`}>
+                    <Link href={`/blog/${post.slug}`}>
                       Read article
                       <ChevronRight className="ml-1 h-4 w-4" />
                     </Link>

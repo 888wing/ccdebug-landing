@@ -36,7 +36,7 @@ export function Navigation() {
               Blog
             </Link>
             <Link
-              href="https://github.com/yourusername/ccdebugger"
+              href="https://github.com/888wing/ccdebugger"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
               target="_blank"
               rel="noopener noreferrer"

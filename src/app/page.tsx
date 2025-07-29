@@ -365,7 +365,7 @@ Suggested fix:
         <div className="container px-4 md:px-6 py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 CCDebugger. All rights reserved.
+              © 2025 CCDebugger. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground">
@@ -374,7 +374,7 @@ Suggested fix:
               <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground">
                 Terms
               </Link>
-              <Link href="https://github.com/yourusername/ccdebugger" className="text-sm text-muted-foreground hover:text-foreground">
+              <Link href="https://github.com/888wing/ccdebugger" className="text-sm text-muted-foreground hover:text-foreground">
                 GitHub
               </Link>
             </div>
