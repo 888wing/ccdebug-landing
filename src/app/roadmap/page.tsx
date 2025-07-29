@@ -222,17 +222,17 @@ export default function Roadmap() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Badge variant="secondary" className="px-4 py-2">
-            <a href="https://github.com/888wing/ccdebugger/issues" className="flex items-center gap-2">
+            <a href="https://github.com/888wing/ccdebugger/issues/new?template=feature_request.yml" className="flex items-center gap-2" target="_blank" rel="noopener noreferrer">
               💡 Suggest a Feature
             </a>
           </Badge>
           <Badge variant="secondary" className="px-4 py-2">
-            <a href="https://github.com/888wing/ccdebugger/discussions" className="flex items-center gap-2">
+            <a href="https://github.com/888wing/ccdebugger/discussions/new?category=ideas" className="flex items-center gap-2" target="_blank" rel="noopener noreferrer">
               💬 Join Discussion
             </a>
           </Badge>
           <Badge variant="secondary" className="px-4 py-2">
-            <a href="/blog" className="flex items-center gap-2">
+            <a href="/blog?category=updates" className="flex items-center gap-2">
               📰 Development Updates
             </a>
           </Badge>

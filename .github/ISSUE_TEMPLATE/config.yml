@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Community Discussions
+    url: https://github.com/888wing/ccdebugger/discussions
+    about: Ask questions, share ideas, and connect with other CCDebugger users
+  - name: 📖 Documentation
+    url: https://888wing.github.io/ccdebug-landing/
+    about: Check our documentation and guides
+  - name: 📰 Blog & Updates
+    url: https://888wing.github.io/ccdebug-landing/blog
+    about: Read the latest development updates and tutorials

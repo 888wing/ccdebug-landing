@@ -1,0 +1,33 @@
+title: "[IDEA] "
+labels: ["idea", "discussion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Share Your Ideas
+        
+        Have an idea for CCDebugger? Want to discuss potential features or improvements? This is the place!
+
+  - type: textarea
+    attributes:
+      label: Your Idea
+      description: Describe your idea in detail
+      placeholder: |
+        I've been thinking about...
+        What if CCDebugger could...
+
+  - type: textarea
+    attributes:
+      label: Use Cases
+      description: How would this benefit you or others?
+      placeholder: |
+        This would help when...
+        Developers could use this to...
+
+  - type: textarea
+    attributes:
+      label: Implementation Thoughts
+      description: Any thoughts on how this could work?
+      placeholder: |
+        This could be implemented by...
+        Technical considerations might include...
