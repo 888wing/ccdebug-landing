@@ -359,7 +359,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.ccdebugger/cache
-          key: ccdebug-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          key: ccdebug-\${{ runner.os }}-\${{ hashFiles('**/package-lock.json') }}
       
       - name: Run Analysis
         run: |
