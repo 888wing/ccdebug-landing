@@ -18,10 +18,10 @@ export default function Roadmap() {
         <div className="roadmap-timeline">
           {/* Q1 2025 */}
           <div className="roadmap-item completed">
-            <div className="roadmap-quarter">Q1 2025 - Foundation</div>
-            <div className="roadmap-title">Core Features & Launch</div>
+            <div className="roadmap-quarter">Q1 2025 - Foundation & Extended Languages</div>
+            <div className="roadmap-title">Core Features & Language Expansion</div>
             <div className="roadmap-description">
-              Establishing the foundation with essential debugging capabilities
+              Establishing the foundation with essential debugging capabilities and comprehensive language support
             </div>
             <ul className="roadmap-features">
               <li>
@@ -43,6 +43,22 @@ export default function Roadmap() {
               <li>
                 <Check className="h-4 w-4 text-green-500" />
                 Basic template system
+              </li>
+              <li>
+                <Check className="h-4 w-4 text-green-500" />
+                <span className="font-semibold text-primary">v1.5: Shell/Bash error analysis</span>
+              </li>
+              <li>
+                <Check className="h-4 w-4 text-green-500" />
+                <span className="font-semibold text-primary">v1.5: Docker/Dockerfile support</span>
+              </li>
+              <li>
+                <Check className="h-4 w-4 text-green-500" />
+                <span className="font-semibold text-primary">v1.5: YAML/JSON configuration analysis</span>
+              </li>
+              <li>
+                <Check className="h-4 w-4 text-green-500" />
+                <span className="font-semibold text-primary">v1.5: Kotlin, Swift, and SQL support</span>
               </li>
             </ul>
           </div>
@@ -241,9 +257,15 @@ export default function Roadmap() {
 
       {/* Update Frequency */}
       <div className="text-center text-sm text-muted-foreground">
-        <p>This roadmap is updated monthly. Last update: January 2025</p>
+        <p>This roadmap is updated monthly. Last update: January 29, 2025</p>
         <p className="mt-2">
           Follow our <a href="/blog" className="text-primary hover:underline">blog</a> for detailed updates on each milestone.
+        </p>
+        <p className="mt-2">
+          <Badge variant="outline" className="text-xs">
+            <Check className="h-3 w-3 mr-1" />
+            v1.5 Released - January 29, 2025
+          </Badge>
         </p>
       </div>
     </div>

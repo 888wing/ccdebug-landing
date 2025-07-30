@@ -28,6 +28,142 @@ export default function ReleasesPage() {
 
           <Separator />
 
+          {/* Version 1.5.0 */}
+          <Card>
+            <CardHeader>
+              <div className="flex items-start justify-between">
+                <div>
+                  <CardTitle className="text-2xl">Version 1.5.0</CardTitle>
+                  <CardDescription className="flex items-center gap-2 mt-1">
+                    <Calendar className="h-4 w-4" />
+                    Released on January 29, 2025
+                  </CardDescription>
+                </div>
+                <Badge variant="default" className="ml-4">
+                  <Sparkles className="mr-1 h-3 w-3" />
+                  Latest
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-6">
+              <div className="flex gap-2">
+                <Button asChild>
+                  <Link href="https://marketplace.visualstudio.com/items?itemName=ccdebugger.vscode-extension">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download v1.5.0
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link href="https://github.com/yourusername/ccdebugger/releases/tag/v1.5.0">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View on GitHub
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-semibold flex items-center gap-2 mb-3">
+                    <Sparkles className="h-5 w-5 text-primary" />
+                    New Features
+                  </h3>
+                  <ul className="space-y-2 ml-7">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        <strong>Shell/Bash Support:</strong> Comprehensive error analysis for shell scripts and command-line operations
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        <strong>Docker/Dockerfile Support:</strong> Intelligent debugging for Docker containers and Dockerfile syntax errors
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        <strong>YAML/JSON Configuration Analysis:</strong> Smart detection and fixes for configuration file errors
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        <strong>Extended Language Support:</strong> Added Kotlin, Swift, and SQL error analysis capabilities
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        <strong>Enhanced Pattern Recognition:</strong> Improved error pattern matching with 50+ new patterns per language
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold flex items-center gap-2 mb-3">
+                    <Wrench className="h-5 w-5 text-primary" />
+                    Improvements
+                  </h3>
+                  <ul className="space-y-2 ml-7">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        Enhanced error context extraction with file path and line number tracking
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        Improved confidence scoring algorithm for more accurate suggestions
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        Better handling of multi-line error messages and stack traces
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        Optimized pattern matching performance by 60%
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="font-semibold flex items-center gap-2 mb-3">
+                    <Bug className="h-5 w-5 text-primary" />
+                    Bug Fixes
+                  </h3>
+                  <ul className="space-y-2 ml-7">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        Fixed pattern conflicts in complex error message parsing
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        Resolved issue with special characters in error messages
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm">
+                        Fixed language detection for mixed-language projects
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Version 1.1.0 */}
           <Card>
             <CardHeader>
@@ -39,10 +175,6 @@ export default function ReleasesPage() {
                     Released on December 15, 2024
                   </CardDescription>
                 </div>
-                <Badge variant="default" className="ml-4">
-                  <Sparkles className="mr-1 h-3 w-3" />
-                  Latest
-                </Badge>
               </div>
             </CardHeader>
             <CardContent className="space-y-6">

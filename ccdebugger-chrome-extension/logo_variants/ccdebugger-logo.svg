@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- CCDebugger Logo - Magnifying glass with error symbol -->
+  
+  <!-- Background (optional - remove for transparency) -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+  
+  <!-- Magnifying glass handle -->
+  <line x1="307" y1="307" x2="412" y2="412" stroke="#000000" stroke-width="48" stroke-linecap="round"/>
+  
+  <!-- Magnifying glass rim -->
+  <circle cx="256" cy="256" r="128" fill="none" stroke="#000000" stroke-width="32"/>
+  
+  <!-- Error symbol: < X > -->
+  <g id="error-symbol">
+    <!-- Left bracket < -->
+    <path d="M 192 256 L 160 224 L 164 228 L 196 256 L 164 284 L 160 288 Z" fill="#000000"/>
+    
+    <!-- Right bracket > -->
+    <path d="M 320 256 L 352 224 L 348 228 L 316 256 L 348 284 L 352 288 Z" fill="#000000"/>
+    
+    <!-- X in center -->
+    <line x1="236" y1="236" x2="276" y2="276" stroke="#000000" stroke-width="16" stroke-linecap="round"/>
+    <line x1="236" y1="276" x2="276" y2="236" stroke="#000000" stroke-width="16" stroke-linecap="round"/>
+  </g>
+</svg>

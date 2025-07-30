@@ -1,6 +1,8 @@
-# CCDebugger Landing Page
+# CCDebugger Landing Page & Chrome Extension
 
-A clean, minimal landing page for CCDebugger - an AI-powered error analysis tool for Claude Code.
+A comprehensive debugging platform featuring an AI-powered error analysis Chrome extension and a modern landing page.
+
+**Project Location**: `/Users/chuisiufai/Desktop/CCDebugger/ccdebugger-landing/`
 
 ## Features
 

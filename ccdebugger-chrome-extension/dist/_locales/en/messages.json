@@ -1,0 +1,91 @@
+{
+  "extensionName": {
+    "message": "CCDebugger - AI Error Assistant",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "AI-powered debugging assistant for web developers. Detect and analyze JavaScript errors in real-time.",
+    "description": "Extension description"
+  },
+  "extensionTitle": {
+    "message": "Click to view error analysis",
+    "description": "Extension tooltip"
+  },
+  "popupTitle": {
+    "message": "Error Analysis",
+    "description": "Popup window title"
+  },
+  "noErrors": {
+    "message": "No errors detected on this page",
+    "description": "Message when no errors are found"
+  },
+  "errorCount": {
+    "message": "$COUNT$ errors detected",
+    "description": "Error count message",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "analyzing": {
+    "message": "Analyzing...",
+    "description": "Message during analysis"
+  },
+  "aiSuggestions": {
+    "message": "AI Suggestions",
+    "description": "AI suggestions header"
+  },
+  "confidence": {
+    "message": "Confidence",
+    "description": "Confidence label"
+  },
+  "clearErrors": {
+    "message": "Clear All",
+    "description": "Clear errors button"
+  },
+  "exportReport": {
+    "message": "Export Report",
+    "description": "Export button"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings link"
+  },
+  "enableMonitoring": {
+    "message": "Enable Error Monitoring",
+    "description": "Toggle for monitoring"
+  },
+  "apiEndpoint": {
+    "message": "API Endpoint",
+    "description": "API endpoint label"
+  },
+  "language": {
+    "message": "Language",
+    "description": "Language setting"
+  },
+  "saveSettings": {
+    "message": "Save Settings",
+    "description": "Save button"
+  },
+  "errorType": {
+    "message": "Error Type",
+    "description": "Error type label"
+  },
+  "runtimeError": {
+    "message": "Runtime Error",
+    "description": "Runtime error type"
+  },
+  "networkError": {
+    "message": "Network Error",
+    "description": "Network error type"
+  },
+  "promiseRejection": {
+    "message": "Unhandled Promise Rejection",
+    "description": "Promise rejection type"
+  },
+  "consoleError": {
+    "message": "Console Error",
+    "description": "Console error type"
+  }
+}

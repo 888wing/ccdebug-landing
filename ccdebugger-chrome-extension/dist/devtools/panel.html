@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CCDebugger Panel</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <div id="panel-container">
+    <header class="panel-header">
+      <h1>CCDebugger Error Analysis</h1>
+      <div class="header-controls">
+        <button id="clear-btn" class="btn btn-secondary">Clear All</button>
+        <button id="refresh-btn" class="btn btn-secondary">Refresh</button>
+        <label class="toggle-label">
+          <input type="checkbox" id="auto-analyze" checked>
+          Auto-analyze
+        </label>
+      </div>
+    </header>
+    
+    <div class="panel-tabs">
+      <button class="tab-btn active" data-tab="errors">Errors</button>
+      <button class="tab-btn" data-tab="network">Network</button>
+      <button class="tab-btn" data-tab="console">Console</button>
+      <button class="tab-btn" data-tab="analysis">AI Analysis</button>
+    </div>
+    
+    <main class="panel-content">
+      <!-- Errors Tab -->
+      <div id="errors-tab" class="tab-content active">
+        <div id="error-list" class="error-list">
+          <div class="empty-state">
+            <p>No errors detected yet.</p>
+            <p class="hint">Errors will appear here as they occur on the page.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Network Tab -->
+      <div id="network-tab" class="tab-content">
+        <div id="network-list" class="error-list">
+          <div class="empty-state">
+            <p>No network errors detected.</p>
+            <p class="hint">Failed network requests will appear here.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Console Tab -->
+      <div id="console-tab" class="tab-content">
+        <div id="console-list" class="error-list">
+          <div class="empty-state">
+            <p>No console errors detected.</p>
+            <p class="hint">Console errors and warnings will appear here.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Analysis Tab -->
+      <div id="analysis-tab" class="tab-content">
+        <div id="analysis-container">
+          <div class="empty-state">
+            <p>Select an error to see AI-powered analysis.</p>
+            <p class="hint">Click on any error in the other tabs to analyze it.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- Error Detail Modal -->
+    <div id="error-detail" class="error-detail hidden">
+      <div class="detail-header">
+        <h2>Error Details</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="detail-content">
+        <div class="detail-section">
+          <h3>Error Information</h3>
+          <div id="error-info"></div>
+        </div>
+        <div class="detail-section">
+          <h3>Stack Trace</h3>
+          <pre id="error-stack"></pre>
+        </div>
+        <div class="detail-section">
+          <h3>AI Analysis</h3>
+          <div id="ai-analysis" class="ai-analysis">
+            <div class="loading">Analyzing...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="panel.js"></script>
+</body>
+</html>

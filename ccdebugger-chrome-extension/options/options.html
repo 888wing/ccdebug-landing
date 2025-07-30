@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCDebugger Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <img src="../assets/icons/icon-48.png" alt="CCDebugger" class="logo">
+                <div>
+                    <h1 data-i18n="extensionName">CCDebugger - AI Error Assistant</h1>
+                    <p class="subtitle" data-i18n="settings">Settings</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Settings Sections -->
+        <main class="settings-content">
+            <!-- General Settings -->
+            <section class="settings-section">
+                <h2>General Settings</h2>
+                
+                <div class="setting-item">
+                    <label class="toggle-setting">
+                        <input type="checkbox" id="enableMonitoring" checked>
+                        <span class="toggle-slider"></span>
+                        <div class="setting-info">
+                            <h3 data-i18n="enableMonitoring">Enable Error Monitoring</h3>
+                            <p>Automatically detect and analyze errors on web pages</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <label class="toggle-setting">
+                        <input type="checkbox" id="enableNotifications" checked>
+                        <span class="toggle-slider"></span>
+                        <div class="setting-info">
+                            <h3>Enable Notifications</h3>
+                            <p>Show notifications for critical errors</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <label class="toggle-setting">
+                        <input type="checkbox" id="enableBadge" checked>
+                        <span class="toggle-slider"></span>
+                        <div class="setting-info">
+                            <h3>Show Error Badge</h3>
+                            <p>Display error count on extension icon</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <label for="language" class="setting-label">
+                        <h3 data-i18n="language">Language</h3>
+                        <p>Choose your preferred language</p>
+                    </label>
+                    <select id="language" class="setting-select">
+                        <option value="en">English</option>
+                        <option value="zh">中文 (Chinese)</option>
+                    </select>
+                </div>
+
+                <div class="setting-item">
+                    <label for="maxErrors" class="setting-label">
+                        <h3>Maximum Errors to Store</h3>
+                        <p>Limit the number of errors stored per page</p>
+                    </label>
+                    <input type="number" id="maxErrors" class="setting-input" min="10" max="500" value="100">
+                </div>
+            </section>
+
+            <!-- API Configuration -->
+            <section class="settings-section">
+                <h2>API Configuration</h2>
+                
+                <div class="setting-item">
+                    <label for="apiEndpoint" class="setting-label">
+                        <h3 data-i18n="apiEndpoint">API Endpoint</h3>
+                        <p>CCDebugger analysis API endpoint</p>
+                    </label>
+                    <input type="url" id="apiEndpoint" class="setting-input" placeholder="https://api.ccdebugger.com/analyze">
+                </div>
+
+                <div class="setting-item">
+                    <label for="apiKey" class="setting-label">
+                        <h3>API Key (Optional)</h3>
+                        <p>For premium features and higher rate limits</p>
+                    </label>
+                    <input type="password" id="apiKey" class="setting-input" placeholder="Enter your API key">
+                </div>
+            </section>
+
+            <!-- Error Filtering -->
+            <section class="settings-section">
+                <h2>Error Filtering</h2>
+                
+                <div class="setting-item">
+                    <label for="ignoredDomains" class="setting-label">
+                        <h3>Ignored Domains</h3>
+                        <p>Don't monitor errors on these domains (one per line)</p>
+                    </label>
+                    <textarea id="ignoredDomains" class="setting-textarea" rows="4" placeholder="example.com&#10;localhost:3000"></textarea>
+                </div>
+
+                <div class="setting-item">
+                    <label for="ignoredErrors" class="setting-label">
+                        <h3>Ignored Error Patterns</h3>
+                        <p>Ignore errors matching these patterns (regex supported)</p>
+                    </label>
+                    <textarea id="ignoredErrors" class="setting-textarea" rows="4" placeholder="ResizeObserver loop limit exceeded&#10;Non-Error promise rejection captured"></textarea>
+                </div>
+            </section>
+
+            <!-- Advanced Settings -->
+            <section class="settings-section">
+                <h2>Advanced Settings</h2>
+                
+                <div class="setting-item">
+                    <label class="toggle-setting">
+                        <input type="checkbox" id="debugMode">
+                        <span class="toggle-slider"></span>
+                        <div class="setting-info">
+                            <h3>Debug Mode</h3>
+                            <p>Enable verbose logging for troubleshooting</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <label for="theme" class="setting-label">
+                        <h3>Theme</h3>
+                        <p>Choose UI theme</p>
+                    </label>
+                    <select id="theme" class="setting-select">
+                        <option value="auto">Auto (System)</option>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Import/Export -->
+            <section class="settings-section">
+                <h2>Import/Export Settings</h2>
+                
+                <div class="import-export">
+                    <button id="exportSettings" class="button button-secondary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 11V3M8 3L5 6M8 3L11 6M3 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Export Settings
+                    </button>
+                    <button id="importSettings" class="button button-secondary">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 5V13M8 13L11 10M8 13L5 10M3 3H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Import Settings
+                    </button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;">
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <div class="actions">
+                <button id="saveSettings" class="button button-primary" data-i18n="saveSettings">Save Settings</button>
+                <button id="resetSettings" class="button button-secondary">Reset to Defaults</button>
+            </div>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                CCDebugger v<span id="version"></span> • 
+                <a href="https://github.com/888wing/ccdebugger" target="_blank">GitHub</a> • 
+                <a href="https://ccdebugger.com" target="_blank">Website</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../lib/storage.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>

@@ -26,7 +26,7 @@ export default function Home() {
           <div className="flex flex-col items-center space-y-8 text-center py-24 md:py-32 animate-in">
             <Badge variant="secondary" className="px-3 py-1">
               <Sparkles className="mr-2 h-3 w-3" />
-              Version 1.1.0 Released
+              Version 1.5.0 Released
             </Badge>
             <div className="space-y-4 max-w-3xl">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
@@ -102,9 +102,9 @@ export default function Home() {
             <Card className="relative overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1">
               <CardHeader>
                 <Languages className="h-10 w-10 text-primary mb-2" />
-                <CardTitle>Multi-Language Support</CardTitle>
+                <CardTitle>Extended Language Support</CardTitle>
                 <CardDescription>
-                  Full support for Chinese and English with intelligent language detection
+                  Now supports 10+ languages including JavaScript, Python, Shell/Bash, Docker, YAML/JSON, Kotlin, Swift, SQL and more
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -297,6 +297,24 @@ Suggested fix:
 {data?.map((item) => (
   // Your mapping logic
 )) || <Loading />}`}</code>
+                    </pre>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="font-medium">Docker Build Error (New in v1.5)</h4>
+                    <pre className="bg-muted p-3 rounded-md text-sm overflow-x-auto">
+                      <code>{`// Error: Service 'web' failed to build: COPY failed
+/ccdebug analyze
+
+// AI Response:
+The Docker build is failing because the COPY instruction 
+can't find the source files. This usually means:
+1. The file path is incorrect
+2. The build context doesn't include the files
+
+Suggested fix:
+# Make sure the path is relative to build context
+COPY ./app /app  # Instead of COPY app /app`}</code>
                     </pre>
                   </div>
                 </CardContent>

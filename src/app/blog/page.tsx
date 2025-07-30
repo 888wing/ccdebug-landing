@@ -21,6 +21,18 @@ import { useSearchParams } from "next/navigation"
 const blogPosts = [
   {
     id: 0,
+    slug: "ccdebugger-1-5-release",
+    title: "CCDebugger 1.5: Expanding Language Support for Modern Development",
+    description: "Major update brings Shell/Bash, Docker, YAML/JSON, Kotlin, Swift, and SQL error analysis",
+    category: "Release",
+    readTime: "5 min read",
+    date: "January 29, 2025",
+    icon: Zap,
+    color: "text-yellow-500",
+    featured: true
+  },
+  {
+    id: 1,
     slug: "january-2025-update",
     title: "January 2025 Development Update",
     description: "CCDebugger launches with AI-powered debugging, roadmap reveal, and exciting features ahead",
@@ -29,10 +41,10 @@ const blogPosts = [
     date: "January 29, 2025",
     icon: Zap,
     color: "text-yellow-500",
-    featured: true
+    featured: false
   },
   {
-    id: 1,
+    id: 2,
     slug: "getting-started",
     title: "Getting Started with CCDebugger: A Complete Guide",
     description: "Learn how to set up and use CCDebugger to supercharge your Claude Code debugging workflow",
@@ -44,7 +56,7 @@ const blogPosts = [
     featured: false
   },
   {
-    id: 2,
+    id: 3,
     slug: "understanding-ai-error-analysis",
     title: "Understanding AI-Powered Error Analysis",
     description: "Deep dive into how CCDebugger uses AI to analyze and understand your code errors",
@@ -55,7 +67,7 @@ const blogPosts = [
     color: "text-purple-500"
   },
   {
-    id: 3,
+    id: 4,
     slug: "custom-templates",
     title: "Custom Templates: Share Your Debugging Patterns",
     description: "How to create, use, and share custom debugging templates with the community",
@@ -66,7 +78,7 @@ const blogPosts = [
     color: "text-green-500"
   },
   {
-    id: 4,
+    id: 5,
     slug: "performance-tips",
     title: "Performance Tips for Large Codebases",
     description: "Optimize CCDebugger performance when working with enterprise-scale projects",
@@ -77,7 +89,7 @@ const blogPosts = [
     color: "text-yellow-500"
   },
   {
-    id: 5,
+    id: 6,
     slug: "building-ccdebugger",
     title: "Building CCDebugger: Our Journey",
     description: "The story behind CCDebugger and how we built an AI-powered debugging tool",
@@ -91,6 +103,7 @@ const blogPosts = [
 
 const categories = [
   { name: "All", count: blogPosts.length },
+  { name: "Release", count: 1 },
   { name: "Update", count: 1 },
   { name: "Tutorial", count: 1 },
   { name: "Technical", count: 1 },

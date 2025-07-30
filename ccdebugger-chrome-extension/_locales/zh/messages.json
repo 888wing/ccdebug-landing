@@ -1,0 +1,91 @@
+{
+  "extensionName": {
+    "message": "CCDebugger - AI 錯誤助手",
+    "description": "擴展名稱"
+  },
+  "extensionDescription": {
+    "message": "為網頁開發者提供的 AI 驅動除錯助手。即時檢測和分析 JavaScript 錯誤。",
+    "description": "擴展描述"
+  },
+  "extensionTitle": {
+    "message": "點擊查看錯誤分析",
+    "description": "擴展提示"
+  },
+  "popupTitle": {
+    "message": "錯誤分析",
+    "description": "彈出視窗標題"
+  },
+  "noErrors": {
+    "message": "此頁面未檢測到錯誤",
+    "description": "無錯誤時的訊息"
+  },
+  "errorCount": {
+    "message": "檢測到 $COUNT$ 個錯誤",
+    "description": "錯誤計數訊息",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "analyzing": {
+    "message": "分析中...",
+    "description": "分析時的訊息"
+  },
+  "aiSuggestions": {
+    "message": "AI 建議",
+    "description": "AI 建議標題"
+  },
+  "confidence": {
+    "message": "信心度",
+    "description": "信心度標籤"
+  },
+  "clearErrors": {
+    "message": "清除全部",
+    "description": "清除錯誤按鈕"
+  },
+  "exportReport": {
+    "message": "匯出報告",
+    "description": "匯出按鈕"
+  },
+  "settings": {
+    "message": "設定",
+    "description": "設定連結"
+  },
+  "enableMonitoring": {
+    "message": "啟用錯誤監控",
+    "description": "監控開關"
+  },
+  "apiEndpoint": {
+    "message": "API 端點",
+    "description": "API 端點標籤"
+  },
+  "language": {
+    "message": "語言",
+    "description": "語言設定"
+  },
+  "saveSettings": {
+    "message": "儲存設定",
+    "description": "儲存按鈕"
+  },
+  "errorType": {
+    "message": "錯誤類型",
+    "description": "錯誤類型標籤"
+  },
+  "runtimeError": {
+    "message": "運行時錯誤",
+    "description": "運行時錯誤類型"
+  },
+  "networkError": {
+    "message": "網路錯誤",
+    "description": "網路錯誤類型"
+  },
+  "promiseRejection": {
+    "message": "未處理的 Promise 拒絕",
+    "description": "Promise 拒絕類型"
+  },
+  "consoleError": {
+    "message": "控制台錯誤",
+    "description": "控制台錯誤類型"
+  }
+}
